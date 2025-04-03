@@ -1,0 +1,242 @@
+body {
+    background-color: #22991740;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    margin: 0 16px;
+}
+
+.heading {
+    font-size: 64px;
+    color: #229917;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading span {
+    color: #444444;
+}
+
+.container {
+    background-color: #fbfbfb;
+    max-width: 660px;
+    margin-inline: auto;
+    border-radius: 10px;
+    padding: 28px 40px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container-header-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-title {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.image {
+    width: 40px;
+    height: 40px;
+}
+
+.twinkle {
+    animation: twinkle 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes twinkle {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.box-quote  {
+    font-size: 14px;
+    font-weight: 400;
+    color: #858585;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgba(73, 163, 0, 0.132);
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgb(73, 163, 0);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #fbfbfb;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress span {
+    padding: 0px 15px;
+    max-width: max-content;
+    white-space: nowrap; /* to prevents text from breaking into multiple lines */
+}
+
+.error-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #cb124a;
+    display: none;
+}
+
+.progress-bar.show-error + .error-text {
+    display: block;
+}
+
+.container-goals {
+    margin-block: 25px;
+}
+
+.completed .custom-checkbox {
+    background-color: #229917;
+    border-color: #229917;
+}
+
+.checkMark {
+    display: none;
+    width: 15px;
+    height: 15px;
+}
+
+.completed .checkMark {
+    display: block;
+}
+
+.container-goals-fields {
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 15px;
+    gap: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.custom-checkbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+    align-self: stretch;
+    width: 100%;
+    font-weight: 700;
+}
+
+.completed .input-field {
+    color: #229917;
+    text-decoration: line-through;
+}
+
+.input-field::placeholder {
+    color: #a7a7a78e;
+}
+
+.above-progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clear-form-data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 600;
+    color: #229917;
+    margin-bottom: 15px;
+    cursor: pointer
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-footer-quote {
+    margin-top: 45px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.container-footer-end-text {
+    font-size: 10px;
+    margin-top: 40px;
+    color: #858585;
+}
+
+@media(max-width: 768px) {
+    .heading {
+        font-size: 42px;
+    }
+
+    .container {
+        padding: 16px 24px;
+    }
+
+    .box-subtitle {
+        font-size: 12px;
+    }
+
+    .progress-bar {
+        height: 20px;
+    }
+
+    .progress {
+        font-size: 10px;
+    }
+
+    .container-goals {
+        margin-block: 10px;
+    }
+
+    .container-goals-fields {
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .container-footer-quote {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .container-footer-end-text {
+        font-size: 8px;
+        margin-top: 35px;
+    }
+}
